@@ -2,22 +2,26 @@
 class Solution {
     public boolean checkXMatrix(int[][] grid) {
 
-        Boolean x = false;
+        int n = grid.length;
 
-        for(int i=0;i<grid.length;i++){
-            for(int j=0;j<grid[i].length;j++){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
                 if(i == j){
                     if(grid[i][j] == 0){
-                        x = false;
+                        return false;
+                    }
+                } else if( i + j == n-1){
+                    if(grid[i][j] == 0){
+                        return false;
                     }
                 } else{
-                    if(grid[i][j] == 0){
-                        x = true;
+                    if(grid[i][j] != 0){
+                        return false;
                     }
                 }
             }
         }    
-        return x;
+        return true;
     
     }
 }
