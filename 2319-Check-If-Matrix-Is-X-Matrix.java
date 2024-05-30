@@ -9,14 +9,10 @@ class Solution {
                 if(i == j){
                     if(grid[i][j] == 0){
                         x = false;
-                    } else{
-                        x = true;
                     }
                 } else{
                     if(grid[i][j] == 0){
                         x = true;
-                    } else{
-                        x = false;
                     }
                 }
             }
